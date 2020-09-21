@@ -1,0 +1,13 @@
+{
+  "TEST": {
+    "PRIVATE_KEY": "C:/Users/Kevin/Desktop/datapipeline/configs/key.pem",
+    "HOST": "54.180.116.17",
+    "LOCALHOST": "127.0.0.1",
+    "SSH_USERNAME": "ec2-user",
+    "USER": "admin",
+    "PASSWORD": "JwRKipz2T933TTcYMUJn",
+    "DB": "BeActive",
+    "REMOTE_BIND_ADDRESS": "beactive.cluster-cqctztemsvsx.ap-northeast-2.rds.amazonaws.com",
+    "REMOTE_PORT": 3306
+  }
+}

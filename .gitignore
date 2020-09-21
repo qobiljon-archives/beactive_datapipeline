@@ -1,6 +1,4 @@
-*.json
 *.xlsx
 *.csv
 *.zip
 *.db
-*.pem

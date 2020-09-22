@@ -27,7 +27,7 @@ class S3fileLoader:
 
         # read access key
         # define s3 client
-        with open('../configs/S3.json', 'r') as f:
+        with open('/Users/kevin/PycharmProjects/beactive_datapipeline/configs/S3.json', 'r') as f:
             config = json.load(f)
         self.s3 = boto3.client('s3',
                                aws_access_key_id=config['accessKey'],

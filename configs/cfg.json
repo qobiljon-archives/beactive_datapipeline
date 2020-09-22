@@ -1,6 +1,6 @@
 {
   "TEST": {
-    "PRIVATE_KEY": "C:/Users/Kevin/Desktop/datapipeline/configs/key.pem",
+    "PRIVATE_KEY": "/Users/kevin/PycharmProjects/beactive_datapipeline/configs/key.pem",
     "HOST": "54.180.116.17",
     "LOCALHOST": "127.0.0.1",
     "SSH_USERNAME": "ec2-user",

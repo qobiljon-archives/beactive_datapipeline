@@ -5,7 +5,7 @@ import json
 
 class ConnectionCfg:
     def __init__(self):
-        with open('C:/Users/Kevin/Desktop/datapipeline/configs/cfg.json', 'r') as f:
+        with open('/Users/kevin/PycharmProjects/beactive_datapipeline/configs/cfg.json', 'r') as f:
             config = json.load(f)
         self.PRIVATE_KEY = config['TEST']['PRIVATE_KEY']
         self.HOST = config['TEST']['HOST']

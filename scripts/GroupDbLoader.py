@@ -56,7 +56,7 @@ class GroupDbLoader(DbConnector):
             table_sql = table_sql + ' where ' + where
         # print(tableSql)
 
-        print(table_sql)
+        # print(table_sql)
 
         table = []
         cur.execute(table_sql)
@@ -120,48 +120,50 @@ class GroupDbLoader(DbConnector):
     # use key to select tables to query (list or dict)
     def run(self, db, key=None):
         gid, oid, setting, start, end = self.get_group_info(db, self.groupName)
-        print('groupInfo-----------------------')
+        # print('groupInfo-----------------------')
         self.gid = gid
         self.start = start
         self.end = end
 
         self.group_members = self.get_group_members(db)
-        print('groupMembers-----------------------')
+        # print('groupMembers-----------------------')
         self.uids = self.group_members['uid'].values.tolist()
 
         if not key:
             self.tables['statusActivity'] = self.get_status_activity(db)
-            print('StatusActivity-----------------------')
+            # print('StatusActivity-----------------------')
             self.tables['missionsViewAlarms'] = self.get_missions_view_alarms(db)
-            print('missionsViewAlarms-----------------------')
+            # print('missionsViewAlarms-----------------------')
             self.tables['missionsView'] = self.get_missions_view(db)
-            print('missionsView-----------------------')
+            # print('missionsView-----------------------')
             self.tables['rewardView'] = self.get_reward_view(db)
-            print('rewardView-----------------------')
+            # print('rewardView-----------------------')
             self.tables['missions'] = self.get_missions(db)
-            print('missions-----------------------')
+            # print('missions-----------------------')
             self.tables['stepCount'] = self.get_step_count(db)
+            # print('batchFiles-----------------------')
+            self.tables['batchFiles'] = self.get_batch_file_list(db)
         else:
             if 'statusActivity' in key:
                 self.tables['statusActivity'] = self.get_status_activity(db)
-                print('StatusActivity-----------------------')
+                # print('StatusActivity-----------------------')
             if 'statusActivity' in key:
                 self.tables['missionsViewAlarms'] = self.get_missions_view_alarms(db)
-                print('missionsViewAlarms-----------------------')
+                # print('missionsViewAlarms-----------------------')
             if 'missionsView' in key:
                 self.tables['missionsView'] = self.get_missions_view(db)
-                print('missionsView-----------------------')
+                # print('missionsView-----------------------')
             if 'rewardView' in key:
                 self.tables['rewardView'] = self.get_reward_view(db)
-                print('rewardView-----------------------')
+                # print('rewardView-----------------------')
             if 'missions' in key:
                 self.tables['missions'] = self.get_missions(db)
-                print('missions-----------------------')
+                # print('missions-----------------------')
             if 'stepCount' in key:
                 self.tables['stepCount'] = self.get_step_count(db)
-                print('stepCount-----------------------')
+                # print('stepCount-----------------------')
             if 'batchFiles' in key:
                 self.tables['batchFiles'] = self.get_batch_file_list(db)
-                print('batchFiles-----------------------')
+                # print('batchFiles-----------------------')
             # if 'userBatch' in key:
             #     uids = key['userBatch']
